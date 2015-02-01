@@ -58,6 +58,10 @@ class Docker(object):
             docker.client.create_container('ubuntu')  # equivalent
         """
         app = getattr(self, 'app', current_app)
+
+        if not app.config['DOCKER_URL']:
+            raise RuntimeError('"DOCKER_URL" must be specified')
+
         if not app.extensions['docker.client']:
             if app.config['DOCKER_TLS']:
                 client_cert = parse_client_cert_pair(
