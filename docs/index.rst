@@ -48,3 +48,9 @@ For large applications which following the application factory pattern:
         app = Flask(__name__)
         docker.init_app(app)
         return app
+
+API Reference
+-------------
+
+.. autoclass:: flask_docker.Docker
+   :members:

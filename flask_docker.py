@@ -14,14 +14,6 @@ class Docker(object):
 
     The instance of :class:`docker.Client` will be created lazily and exist in
     the current application context.
-
-    ::
-
-        from flask import Flask
-        from flask_docker import Docker
-
-        app = Flask(__name__)
-        docker = Docker(app)
     """
 
     def __init__(self, app=None):
@@ -30,6 +22,10 @@ class Docker(object):
             self.init_app(app)
 
     def init_app(self, app):
+        """Initializes an application for using :class:`docker.Client`.
+
+        :param app: an instance of :class:`~flask.Flask`.
+        """
         app.extensions = getattr(app, 'extensions', {})
         app.extensions['docker.client'] = None
 
@@ -55,6 +51,12 @@ class Docker(object):
 
     @property
     def client(self):
+        """The original :class:`docker.Client` object. All docker operation
+        calling will be forwarded here. ::
+
+            docker.create_container('ubuntu')
+            docker.client.create_container('ubuntu')  # equivalent
+        """
         app = getattr(self, 'app', current_app)
         if not app.extensions['docker.client']:
             if app.config['DOCKER_TLS']:
