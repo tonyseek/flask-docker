@@ -1,6 +1,13 @@
 Flask-Docker
 ============
 
+|
+
+.. include:: ../README.rst
+   :start-line: 5
+   :end-line: 12
+
+
 Installation
 ------------
 
