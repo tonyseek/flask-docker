@@ -33,4 +33,5 @@ setup(
         'Topic :: Utilities',
     ],
     py_modules=['flask_docker'],
+    install_requires=['flask', 'docker-py'],
     platforms=['Any'])
