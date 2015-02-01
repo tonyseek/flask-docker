@@ -95,6 +95,52 @@ to the Docker server.
 .. _boot2docker: http://boot2docker.io
 
 
+Using with Boot2docker
+----------------------
+
+Boot2docker_ is one of the ways to use Docker in Mac OS X and Windows. It
+provides a command line utility to manage and inspect the VM (virtual machine)
+which running Docker.
+
+For using Flask-Docker with boot2docker, you need to start the VM and view its
+information::
+
+    $ boot2docker up
+    ...
+    $ boot2docker shellinit
+    Writing /Users/yo/.boot2docker/certs/boot2docker-vm/ca.pem
+    Writing /Users/yo/.boot2docker/certs/boot2docker-vm/cert.pem
+    Writing /Users/yo/.boot2docker/certs/boot2docker-vm/key.pem
+        export DOCKER_HOST=tcp://192.168.59.103:2376
+        export DOCKER_CERT_PATH=/Users/yo/.boot2docker/certs/boot2docker-vm
+        export DOCKER_TLS_VERIFY=1
+    $ boot2docker ssh docker version
+    Client version: 1.4.1
+    Client API version: 1.16
+    Go version (client): go1.3.3
+    Git commit (client): 5bc2ff8
+    OS/Arch (client): linux/amd64
+    Server version: 1.4.1
+    Server API version: 1.16
+    Go version (server): go1.3.3
+    Git commit (server): 5bc2ff8
+
+Now you can configure your Flask application::
+
+    $ cat /path/to/config
+    DOCKER_URL="https://192.168.59.103:2376"
+    DOCKER_VERSION="1.16"
+    DOCKER_TLS=True
+    DOCKER_TLS_CERT_PATH="/Users/yo/.boot2docker/certs/boot2docker-vm"
+    DOCKER_TLS_ASSERT_HOSTNAME=False
+
+The self-signed certificate of boot2docker usually uses ``boot2docker`` as
+hostname. It is not able to be matched with ``http://192.168.59.103:2376``.
+So you may need to set ``DOCKER_TLS_ASSERT_HOSTNAME`` to ``False``.
+
+.. _Boot2docker: http://boot2docker.io
+
+
 API Reference
 -------------
 
