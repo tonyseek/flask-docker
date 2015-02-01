@@ -109,7 +109,7 @@ html_theme = 'kr_small'
 # documentation.
 html_theme_options = {
     'github_fork': 'tonyseek/flask-docker',
-    'github_fork_ribbon': 'http://aral.github.com/fork-me-on-github-retina-ribbons/right-graphite@2x.png',
+    'github_fork_ribbon': 'http://aral.github.com/fork-me-on-github-retina-ribbons/right-grey@2x.png',
     'index_logo': 'flask-docker.png',
     'index_logo_width': '430px',
     'index_logo_height': '100px',
