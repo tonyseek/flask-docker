@@ -19,7 +19,7 @@ Installation
 Configuration
 -------------
 
-You can configure it like mostly extensions of Flask.
+You can configure it like most extensions of Flask.
 
 For single file applications:
 
@@ -51,7 +51,6 @@ For large applications which following the application factory pattern:
 
 The Flask-Docker has some configuration values that describes how to connect
 to the Docker server.
-
 
 ============================ ==================================================
 `DOCKER_URL`                 The URL of Docker server. **REQUIRED**
