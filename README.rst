@@ -1,4 +1,6 @@
-|Build Status| |Coverage Status| |PyPI Version| |PyPI Status| |Wheel Status| |Python Versions| |Python Implementations|
+|Build Status| |Coverage Status| |PyPI Version| |PyPI Status| |Wheel Status|
+
+|Python Versions| |Python Implementations|
 
 Flask-Docker
 ============
