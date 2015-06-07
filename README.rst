@@ -40,7 +40,7 @@ You can send a pull reueqst on
 .. |Coverage Status| image:: https://img.shields.io/coveralls/tonyseek/flask-docker.svg?style=flat
    :target: https://coveralls.io/r/tonyseek/flask-docker
    :alt: Coverage Status
-.. |Wheel Status| image:: https://pypip.in/wheel/Flask-Docker/badge.svg?style=flat
+.. |Wheel Status| image:: https://img.shields.io/pypi/wheel/Flask-Docker.svg?style=flat
    :target: https://warehouse.python.org/project/Flask-Docker
    :alt: Wheel Status
 .. |PyPI Version| image:: https://img.shields.io/pypi/v/Flask-Docker.svg?style=flat
