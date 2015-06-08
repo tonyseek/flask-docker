@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, current_app
 from flask_docker import Docker
 from pytest import fixture, raises
 import responses
@@ -13,6 +13,7 @@ def docker():
 
 def test_singleton(docker):
     assert docker.app
+    assert docker.app is not current_app
 
 
 def test_url_missing(docker):

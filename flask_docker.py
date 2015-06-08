@@ -17,7 +17,9 @@ class Docker(object):
     """
 
     def __init__(self, app=None):
-        if app:
+        if app is None:
+            self.app = current_app
+        else:
             self.app = app
             self.init_app(app)
 
@@ -49,18 +51,16 @@ class Docker(object):
             docker.create_container('ubuntu')
             docker.client.create_container('ubuntu')  # equivalent
         """
-        app = getattr(self, 'app', current_app)
-
-        if not app.config['DOCKER_URL']:
+        if not self.app.config['DOCKER_URL']:
             raise RuntimeError('"DOCKER_URL" must be specified')
 
-        if not app.extensions['docker.client']:
-            app.extensions['docker.client'] = Client(
-                base_url=app.config['DOCKER_URL'],
-                version=app.config['DOCKER_VERSION'],
-                timeout=app.config['DOCKER_TIMEOUT'],
-                tls=make_tls_config(app.config))
-        return app.extensions['docker.client']
+        if not self.app.extensions['docker.client']:
+            self.app.extensions['docker.client'] = Client(
+                base_url=self.app.config['DOCKER_URL'],
+                version=self.app.config['DOCKER_VERSION'],
+                timeout=self.app.config['DOCKER_TIMEOUT'],
+                tls=make_tls_config(self.app.config))
+        return self.app.extensions['docker.client']
 
     def __getattr__(self, name):
         if name != 'app' and hasattr(self.client, name):
