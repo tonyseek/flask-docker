@@ -6,9 +6,12 @@ Flask-Docker
 Flask-Docker is an extension for Flask_ that integrates Docker_ client into
 your application. It is based on the official client docker-py_.
 
+The document is in ReadTheDocs_.
+
 .. _Flask: http://flask.pocoo.org
 .. _Docker: https://www.docker.com
 .. _docker-py: https://github.com/docker/docker-py#readme
+.. _ReadTheDocs: https://flask-docker.readthedocs.org
 
 
 Installation
