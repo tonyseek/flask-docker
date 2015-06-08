@@ -11,7 +11,7 @@ setup(
     name='Flask-Docker',
     description='Using Docker client in your Flask application.',
     long_description=long_description,
-    version='0.1.0',
+    version='0.2.0',
     author='Jiangge Zhang',
     author_email='tonyseek@gmail.com',
     url='https://github.com/tonyseek/flask-docker',
