@@ -1,7 +1,7 @@
 Changelog
 ---------
 
-0.2.0 - Unreleased
+0.2.0 - 2015-06-08
 ~~~~~~~~~~~~~~~~~~
 
 * Make ``app`` attribute always be accessible in :class:`flask_docker.Docker`.
