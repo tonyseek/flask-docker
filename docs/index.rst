@@ -144,3 +144,5 @@ API Reference
 
 .. autoclass:: flask_docker.Docker
    :members:
+
+.. include:: ../CHANGELOG.rst
