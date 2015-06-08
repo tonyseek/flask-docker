@@ -1,6 +1,4 @@
-|Build Status| |Coverage Status| |PyPI Version| |PyPI Status| |Wheel Status|
-
-|Python Versions| |Python Implementations|
+|Build Status| |Coverage Status| |PyPI Version| |Wheel Status|
 
 Flask-Docker
 ============
@@ -48,8 +46,3 @@ You can send a pull reueqst on
 .. |PyPI Version| image:: https://img.shields.io/pypi/v/Flask-Docker.svg?style=flat
    :target: https://pypi.python.org/pypi/Flask-Docker
    :alt: PyPI Version
-.. |PyPI Status| image:: https://img.shields.io/pypi/status/Flask-Docker.svg?style=flat
-   :target: https://pypi.python.org/pypi/Flask-Docker
-   :alt: PyPI Version
-.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/Flask-Docker.svg?style=flat
-.. |Python Implementations| image:: https://img.shields.io/pypi/implementation/Flask-Docker.svg?style=flat
