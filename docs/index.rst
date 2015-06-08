@@ -19,7 +19,7 @@ Installation
 Configuration
 -------------
 
-You can configure it like mostly extensions of Flask.
+You can configure it like most extensions of Flask.
 
 For single file applications:
 
@@ -52,7 +52,6 @@ For large applications which following the application factory pattern:
 The Flask-Docker has some configuration values that describes how to connect
 to the Docker server.
 
-
 ============================ ==================================================
 `DOCKER_URL`                 The URL of Docker server. **REQUIRED**
 `DOCKER_VERSION`             The API version of Docker server.
@@ -76,8 +75,8 @@ to the Docker server.
                              certificate.
                              Because the client certificate have two files (a
                              public and a private), this configuration value
-                             should be a tuple of their path. (e.g.
-                             ``('/path/to/cert.pem', '/path/to/key.pem')``)
+                             should be a colon-separated tuple of their path.
+                             (e.g. ``"/path/to/cert.pem:/path/to/key.pem"``)
                              This defaults to ``None``.
 `DOCKER_TLS_CA_CERT`         The file path to the CA certificate.
                              It is usually be used with a self-signed
@@ -86,9 +85,8 @@ to the Docker server.
 `DOCKER_TLS_CERT_PATH`       This defaults to ``None``. Once it be specified,
                              The default value of `DOCKER_TLS_CLIENT_CERT` and
                              `DOCKER_TLS_CA_CERT` will be filled to
-                             ``("{DOCKER_TLS_CERT_PATH}/cert.pem",
-                             "{DOCKER_TLS_CERT_PATH}/key.pem")`` and
-                             ``"{DOCKER_TLS_CERT_PATH}/ca.pem"`` instead of
+                             ``"{0}/cert.pem:{0}/key.pem"`` and
+                             ``"{0}/ca.pem"`` instead of
                              ``None``. It is usually be used with boot2docker_.
 ============================ ==================================================
 
@@ -146,3 +144,5 @@ API Reference
 
 .. autoclass:: flask_docker.Docker
    :members:
+
+.. include:: ../CHANGELOG.rst

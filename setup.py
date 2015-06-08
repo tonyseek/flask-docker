@@ -9,9 +9,9 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 
 setup(
     name='Flask-Docker',
-    description='Uses Docker client in your Flask application.',
+    description='Using Docker client in your Flask application.',
     long_description=long_description,
-    version='0.1.0',
+    version='0.2.0',
     author='Jiangge Zhang',
     author_email='tonyseek@gmail.com',
     url='https://github.com/tonyseek/flask-docker',
@@ -29,9 +29,12 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
         'Topic :: Utilities',
     ],
+    zip_safe=False,
     py_modules=['flask_docker'],
     install_requires=['flask', 'docker-py'],
     platforms=['Any'])
