@@ -1,5 +1,5 @@
 docker-py==0.7.1
-Flask==0.10.1
+Flask==0.12.4
 itsdangerous==0.24
 requests==2.20.0
 six==1.9.0

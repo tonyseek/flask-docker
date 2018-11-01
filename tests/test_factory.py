@@ -32,11 +32,11 @@ def test_out_of_context():
     # but if we...
     with raises(RuntimeError) as error:
         docker.app.name
-    assert error.value.args[0] == 'working outside of application context'
+    assert 'outside of application context' in error.value.args[0]
 
     with raises(RuntimeError) as error:
         docker.client
-    assert error.value.args[0] == 'working outside of application context'
+    assert 'outside of application context' in error.value.args[0]
 
 
 def test_url_missing(app):
