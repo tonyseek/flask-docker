@@ -1,0 +1,4 @@
+sphinx
+sphinx-kr-theme
+
+jinja2>=2.8.1  # CVE-2016-10745 and CVE-2019-10906
