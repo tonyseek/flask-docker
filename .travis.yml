@@ -7,11 +7,10 @@ python:
   - "pypy"
 install:
   - "pip install -U setuptools pip"
-  - "pip install pytest pytest-cov pytest-pep8 mock responses coveralls"
+  - "pip install pytest>=3.6 pytest-cov pytest-pep8 mock responses coveralls"
   - "pip install ."
 script: "py.test"
 after_success: "coveralls"
 branches:
   only:
     - master
-    - develop

@@ -12,7 +12,7 @@ your application. It is based on the official client docker-py_.
 
 The document is in ReadTheDocs_.
 
-.. _ReadTheDocs: https://flask-docker.readthedocs.org
+.. _ReadTheDocs: https://flask-docker.readthedocs.io
 
 
 Installation
