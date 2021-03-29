@@ -4,9 +4,17 @@
 #
 #    pip-compile requirements.in
 #
-docutils==0.12            # via sphinx
+docutils==0.12
+    # via sphinx
 jinja2==2.10.1
-markupsafe==0.23          # via jinja2
-pygments==2.0.2           # via sphinx
+    # via
+    #   -r requirements.in
+    #   sphinx
+markupsafe==0.23
+    # via jinja2
+pygments==2.7.4
+    # via sphinx
 sphinx-kr-theme==0.2.1
+    # via -r requirements.in
 sphinx==1.2.3
+    # via -r requirements.in
